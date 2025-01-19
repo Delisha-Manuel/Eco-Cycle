@@ -1,5 +1,7 @@
 <h2>EcoCycle</h2>
 
+![](https://github.com/Delisha-Manuel/EcoCycle/blob/main/EcoCycleGif.gif)
+
 Did you know that more than half of the waste in landfills comes from households, and around 25% of it is placed in the wrong bin? This means we are sending reusable items to waste sites, further contributing to global warming.
 
 That's why I created EcoCycle: a web app that uses a deep-learning image classification model to identify items in your home and provide creative ideas for upcycling them, helping reduce household waste.
