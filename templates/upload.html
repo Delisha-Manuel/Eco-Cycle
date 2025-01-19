@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%; margin: 0; padding: 0; width: 100%;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>EcoCycle</title>
+    <meta name="description" content="Upload an image of an item in your wardrobe, and learn how to upcycle it!" />
+    <!-- Pico.css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.0.6/css/pico.min.css" />
+</head>
+
+<body style="background-color: #fff1d4; height: 100%; width: 100%; min-height: 100vh;">
+    <!-- Header -->
+    <header class="container" style="text-align: center; margin-bottom: 0; border-bottom: 3px solid black">
+        <hgroup>
+            <h1 style="color: #608344; font-size: 36px; margin-bottom: 20px;"></h1>
+            <img
+                src="/static/beigeLogo.png"
+                style="max-width: 32%; height: auto; align-content: center;"
+            />
+            <p style="color: #00317b; font-size: 36px; max-width: 100%; text-align: center;">
+                <b>Snap, Upload, Act: Upcycle Items Around the House with Fun Ideas!!</b>
+            </p>
+        </hgroup>
+    </header>
+
+    <!-- Main -->
+    <main class="container">
+        <!-- ./ Article Section -->
+
+        <!-- Upload and Result Zone -->
+        <section style="display: flex; justify-content: space-between; gap: 20px; margin-bottom: 40px;">
+            <!-- Upload and Image Preview Section -->
+            <div style="flex: 1; display: flex; flex-direction: column;  border-right: 3px solid #000000">
+
+                <section class="upload-zone" style="display: flex; justify-content: center; align-items: top; height: 45vh; text-align: center; margin-top: 0px;">
+                    <div class="upload-content" style="display: flex; flex-direction: column; text-align: center; width: 100%; max-width: 600px;">
+                        <div class="drop-target" id="dropTarget" style="border: 2px dashed #608344; width: 90%; height: 100px; display: flex; justify-content: center; align-items: center; text-align: center; border-radius: 10px;">
+                            <p style="color: #608344; font-size: 18px; margin: 0;"><b>Drag & drop an image here</b></p>
+                        </div>
+
+                        <!-- Custom File Input -->
+                        <div style="margin-top: 20px; display: flex; justify-content: center; width: 90%;">
+                            <label for="fileInput" style="background-color: #A4CD49; color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer; font-size: 16px; text-align: center;">
+                                Choose File
+                            </label>
+                            <input type="file" id="fileInput" style="display: none;" accept="image/*" onchange="previewImage(event)" />
+                            <span id="fileName" style="margin-left: 10px; color: #608344; font-size: 16px; align-self: center;">
+                                No file chosen
+                            </span>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Image Preview Section -->
+                <section class="image-preview" style="text-align: center; margin-top: -100px; width: 90%;">
+                    <div class="preview-container">
+                        <img id="imagePreview" src="" alt="" style="max-width: 50%; height: auto;" />
+                    </div>
+                </section>
+            </div>
+
+            <!-- Result Section (Initially hidden) -->
+            <div style="flex: 1; padding-left: 20px;">
+                <section class="result-card" id="resultCard" style="display: none; text-align: center;">
+                    <div class="section-header">
+                        <h2 style="color: #608344" id="resultLabel">
+                          Class: <span class="result-value">-</span>
+                        </h2>
+                    </div>
+                    <div class="result-details">
+                        <p id="resultConfidence" style="color: #12304e">
+                            Confidence: <span class="result-value">-</span>
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+        </section>
+        <!-- ./ Upload and Result Zone -->
+
+    </main>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
